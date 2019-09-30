@@ -1,0 +1,54 @@
+{
+  "name": "sharp-town",
+  "version": "1.0.0",
+  "description": "shared component between town projects",
+  "main": "index.js",
+  "scripts": {
+    "lint": "echo \"lint\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangchenyue/sharp-town.git"
+  },
+  "keywords": [
+    "web",
+    "components"
+  ],
+  "author": "czhang13@slb.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhangchenyue/sharp-town/issues"
+  },
+  "homepage": "https://github.com/zhangchenyue/sharp-town#readme",
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^8.2.0",
+    "commitizen": "^4.0.3",
+    "commitlint": "^8.2.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.0.7"
+  }
+}
